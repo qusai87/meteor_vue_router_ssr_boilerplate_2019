@@ -1,0 +1,11 @@
+<li>
+  <button class="delete" @click="deleteTask">&times;</button>
+
+  <input type="checkbox" @change="toggleChecked" class="toggle-checked" />
+
+  <button class="toggle-private">
+    
+  </button>
+  
+  <span class="text"><strong>{{username}}</strong> - {{data.text}}</span>
+</li>

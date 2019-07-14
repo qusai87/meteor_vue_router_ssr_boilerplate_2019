@@ -1,0 +1,27 @@
+<div>
+  <header>
+    <h1>Todo List ({{incompleteCount}})</h1>
+
+    <label class="hide-completed">
+      <input type="checkbox" />
+      Hide Completed Tasks
+    </label>
+
+    <form class="new-task" v-if="currentUser">
+      <input type="text" name="text" placeholder="Type to add new tasks" />
+    </form>
+
+  </header>
+
+  <ul>
+    <Task 
+        v-for="task in tasks"
+        :key="task._id"
+        :text="task.text"
+        :id="task._id"
+        :owner="task.owner"
+        :checked="task.checked"
+        :private="task.private"
+      />
+  </ul>
+</div>
